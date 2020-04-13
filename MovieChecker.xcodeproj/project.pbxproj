@@ -17,6 +17,7 @@
 		9878CBD524434BA40068B043 /* MovieCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878CBD424434BA40068B043 /* MovieCheckerTests.swift */; };
 		9878CBE024434BA40068B043 /* MovieCheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878CBDF24434BA40068B043 /* MovieCheckerUITests.swift */; };
 		9878CBEE24434C270068B043 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9878CBED24434C270068B043 /* GoogleService-Info.plist */; };
+		98B114AC24446456000A284D /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B114AB24446456000A284D /* HomePageViewController.swift */; };
 		A98BF064B8A0A5B426B4CCF9 /* Pods_MovieChecker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0855E5976933503242CA75A /* Pods_MovieChecker.framework */; };
 		D1344FB9DCB419755462D625 /* Pods_MovieCheckerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD73150E86DB6FA1C0666559 /* Pods_MovieCheckerTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		9878CBDF24434BA40068B043 /* MovieCheckerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCheckerUITests.swift; sourceTree = "<group>"; };
 		9878CBE124434BA40068B043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9878CBED24434C270068B043 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		98B114AB24446456000A284D /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		A1EA9B7A67FA7B79C9157126 /* Pods-MovieChecker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieChecker.release.xcconfig"; path = "Target Support Files/Pods-MovieChecker/Pods-MovieChecker.release.xcconfig"; sourceTree = "<group>"; };
 		AD73150E86DB6FA1C0666559 /* Pods_MovieCheckerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieCheckerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C104B6D4FDEBBE627CEFDAB2 /* Pods-MovieChecker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieChecker.debug.xcconfig"; path = "Target Support Files/Pods-MovieChecker/Pods-MovieChecker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				9878CBC824434BA40068B043 /* LaunchScreen.storyboard */,
 				9878CBCB24434BA40068B043 /* Info.plist */,
 				9878CBED24434C270068B043 /* GoogleService-Info.plist */,
+				98B114AB24446456000A284D /* HomePageViewController.swift */,
 			);
 			path = MovieChecker;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98B114AC24446456000A284D /* HomePageViewController.swift in Sources */,
 				9878CBC224434BA30068B043 /* ViewController.swift in Sources */,
 				9878CBBE24434BA30068B043 /* AppDelegate.swift in Sources */,
 				9878CBC024434BA30068B043 /* SceneDelegate.swift in Sources */,

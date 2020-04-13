@@ -30,10 +30,53 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="X6P-3W-80I"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="139"/>
+            <point key="canvasLocation" x="-1436" y="43"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rs4-hF-MJ5">
+            <objects>
+                <navigationController id="IlL-nc-RVq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JTL-eQ-MCB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="y19-dY-O1V" kind="relationship" relationship="rootViewController" id="CkY-Mf-CvR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bt3-Ca-d57" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449" y="-674"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="zfM-wc-aBq">
+            <objects>
+                <viewController storyboardIdentifier="homePage" id="y19-dY-O1V" customClass="HomePageViewController" customModule="MovieChecker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ePx-wW-JqW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iya-cv-P6o">
+                                <rect key="frame" x="171" y="433" width="72" height="30"/>
+                                <state key="normal" title="Main page"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Iya-cv-P6o" firstAttribute="centerX" secondItem="ePx-wW-JqW" secondAttribute="centerX" id="Tlh-6K-fRK"/>
+                            <constraint firstItem="Iya-cv-P6o" firstAttribute="centerY" secondItem="ePx-wW-JqW" secondAttribute="centerY" id="jtA-5K-YLg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yRB-jq-gzz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="gOS-8N-jq2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osO-fP-8Rz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449" y="43"/>
         </scene>
     </scenes>
 </document>
