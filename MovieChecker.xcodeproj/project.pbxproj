@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4B278AAC961C4C8CDEBF5944 /* Pods_MovieChecker_MovieCheckerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C98D21854DC4EF5A9A2A415 /* Pods_MovieChecker_MovieCheckerUITests.framework */; };
+		9863642924459E1A001AB0CA /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9863642824459E1A001AB0CA /* MainNavigationController.swift */; };
+		9863642B2445A292001AB0CA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9863642A2445A292001AB0CA /* MainTabBarController.swift */; };
 		9878CBBE24434BA30068B043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878CBBD24434BA30068B043 /* AppDelegate.swift */; };
 		9878CBC024434BA30068B043 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878CBBF24434BA30068B043 /* SceneDelegate.swift */; };
 		9878CBC224434BA30068B043 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878CBC124434BA30068B043 /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 		2082E8A21536FB4F9EC21832 /* Pods-MovieCheckerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCheckerTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieCheckerTests/Pods-MovieCheckerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		606D08CDDD2E1A80EC2585D2 /* Pods-MovieCheckerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieCheckerTests.release.xcconfig"; path = "Target Support Files/Pods-MovieCheckerTests/Pods-MovieCheckerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C98D21854DC4EF5A9A2A415 /* Pods_MovieChecker_MovieCheckerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieChecker_MovieCheckerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9863642824459E1A001AB0CA /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		9863642A2445A292001AB0CA /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9878CBBA24434BA30068B043 /* MovieChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9878CBBD24434BA30068B043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9878CBBF24434BA30068B043 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				9878CBBF24434BA30068B043 /* SceneDelegate.swift */,
 				9878CBC124434BA30068B043 /* ViewController.swift */,
 				9878CBC324434BA30068B043 /* Main.storyboard */,
+				9863642A2445A292001AB0CA /* MainTabBarController.swift */,
+				9863642824459E1A001AB0CA /* MainNavigationController.swift */,
 				9878CBC624434BA40068B043 /* Assets.xcassets */,
 				9878CBC824434BA40068B043 /* LaunchScreen.storyboard */,
 				9878CBCB24434BA40068B043 /* Info.plist */,
@@ -450,7 +456,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9863642924459E1A001AB0CA /* MainNavigationController.swift in Sources */,
 				98B114AC24446456000A284D /* HomePageViewController.swift in Sources */,
+				9863642B2445A292001AB0CA /* MainTabBarController.swift in Sources */,
 				9878CBC224434BA30068B043 /* ViewController.swift in Sources */,
 				9878CBBE24434BA30068B043 /* AppDelegate.swift in Sources */,
 				9878CBC024434BA30068B043 /* SceneDelegate.swift in Sources */,
@@ -633,7 +641,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.optional.MovieChecker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.optional.moviechecker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -651,7 +659,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.optional.MovieChecker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.optional.moviechecker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
