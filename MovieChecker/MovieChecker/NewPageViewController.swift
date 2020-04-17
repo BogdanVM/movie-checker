@@ -64,6 +64,8 @@ class NewPageViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
         
         saveToFirebase(collection, newItem)
+        showToast(message: "The " + itemType + " has been successfully saved")
+        redirectToHomeTab()
     }
     
     @IBAction func changeImage(_ sender: UIButton) {
@@ -76,6 +78,35 @@ class NewPageViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 
             present(imagePicker, animated: true, completion: nil)
         }
+    }
+    
+    private func showToast(message : String) {
+
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+             toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+    }
+    
+    private func redirectToHomeTab() {
+        let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let mainTabBarController = mainStoryboard.instantiateViewController(withIdentifier: "mainTabBarController") as? MainTabBarController else {
+            return
+        }
+        
+        mainTabBarController.selectedIndex = 0
+        present(mainTabBarController, animated: true, completion: nil)
     }
     
     private func saveToFirebase(_ collection: String, _ newItem: [String : String]) {
