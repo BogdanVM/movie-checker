@@ -12,11 +12,15 @@ import GoogleSignIn
 
 class ViewController: UIViewController, GIDSignInDelegate {
 
+    @IBOutlet weak var loginBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().delegate = self
+        
+        makeButtonRound()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,6 +61,11 @@ class ViewController: UIViewController, GIDSignInDelegate {
         }
         
         present(mainTabBarController, animated: true, completion: nil)
+    }
+    
+    private func makeButtonRound() {
+        self.loginBtn.layer.masksToBounds = true
+        self.loginBtn.layer.cornerRadius = self.loginBtn.bounds.width / 2
     }
 }
 
