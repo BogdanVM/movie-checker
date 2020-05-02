@@ -16,6 +16,8 @@
 		984B27B024498B89003D84D1 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984B27AF24498B89003D84D1 /* MoviesTableViewController.swift */; };
 		984B27B224499209003D84D1 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984B27B124499209003D84D1 /* MovieTableViewCell.swift */; };
 		9863642B2445A292001AB0CA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9863642A2445A292001AB0CA /* MainTabBarController.swift */; };
+		9872FE95245C0691004E3CC3 /* TVShowsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872FE94245C0691004E3CC3 /* TVShowsTableViewCell.swift */; };
+		9872FE97245C06C0004E3CC3 /* TVShowsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9872FE96245C06C0004E3CC3 /* TVShowsTableViewController.swift */; };
 		9878CBBE24434BA30068B043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878CBBD24434BA30068B043 /* AppDelegate.swift */; };
 		9878CBC024434BA30068B043 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878CBBF24434BA30068B043 /* SceneDelegate.swift */; };
 		9878CBC224434BA30068B043 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878CBC124434BA30068B043 /* ViewController.swift */; };
@@ -59,6 +61,8 @@
 		984B27AF24498B89003D84D1 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		984B27B124499209003D84D1 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		9863642A2445A292001AB0CA /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		9872FE94245C0691004E3CC3 /* TVShowsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsTableViewCell.swift; sourceTree = "<group>"; };
+		9872FE96245C06C0004E3CC3 /* TVShowsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsTableViewController.swift; sourceTree = "<group>"; };
 		9878CBBA24434BA30068B043 /* MovieChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9878CBBD24434BA30068B043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9878CBBF24434BA30068B043 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 				9878CBBF24434BA30068B043 /* SceneDelegate.swift */,
 				9878CBC124434BA30068B043 /* ViewController.swift */,
 				9878CBC324434BA30068B043 /* Main.storyboard */,
+				9872FE94245C0691004E3CC3 /* TVShowsTableViewCell.swift */,
 				9863642A2445A292001AB0CA /* MainTabBarController.swift */,
 				9878CBC624434BA40068B043 /* Assets.xcassets */,
 				9878CBC824434BA40068B043 /* LaunchScreen.storyboard */,
@@ -149,6 +154,7 @@
 				984B27A52449821E003D84D1 /* MoviesViewController.swift */,
 				984B27A724498248003D84D1 /* TVShowsViewController.swift */,
 				984B27AF24498B89003D84D1 /* MoviesTableViewController.swift */,
+				9872FE96245C06C0004E3CC3 /* TVShowsTableViewController.swift */,
 				984B27B124499209003D84D1 /* MovieTableViewCell.swift */,
 			);
 			path = MovieChecker;
@@ -473,11 +479,13 @@
 			files = (
 				984B27A824498248003D84D1 /* TVShowsViewController.swift in Sources */,
 				98B114AC24446456000A284D /* HomePageViewController.swift in Sources */,
+				9872FE95245C0691004E3CC3 /* TVShowsTableViewCell.swift in Sources */,
 				9863642B2445A292001AB0CA /* MainTabBarController.swift in Sources */,
 				9835229C2446F6A100F530B5 /* NewPageViewController.swift in Sources */,
 				9878CBC224434BA30068B043 /* ViewController.swift in Sources */,
 				9835229E2446F8C700F530B5 /* MainNavigationController.swift in Sources */,
 				9878CBBE24434BA30068B043 /* AppDelegate.swift in Sources */,
+				9872FE97245C06C0004E3CC3 /* TVShowsTableViewController.swift in Sources */,
 				984B27B024498B89003D84D1 /* MoviesTableViewController.swift in Sources */,
 				9878CBC024434BA30068B043 /* SceneDelegate.swift in Sources */,
 				984B27B224499209003D84D1 /* MovieTableViewCell.swift in Sources */,

@@ -10,27 +10,27 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class MoviesTableViewController: UITableViewController {
+class TVShowsTableViewController: UITableViewController {
     
     let storageRef = Storage.storage().reference()
     let db = Firestore.firestore()
     let user = Auth.auth().currentUser
     
-    var movies = [[String: Any]]()
+    var tvShows = [[String: Any]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 100;
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        movies.removeAll()
+        self.tableView.rowHeight = 100;
+        tvShows.removeAll()
         self.tableView.reloadData()
         
         let userId = user?.uid
-        db.collection("movies").whereField("userId", isEqualTo: userId ?? "")
+        db.collection("series").whereField("userId", isEqualTo: userId ?? "")
             .addSnapshotListener { querySnapshot, error in
                 guard let documents = querySnapshot?.documents else {
                     print("Error fetching documents: \(error!)")
@@ -38,7 +38,7 @@ class MoviesTableViewController: UITableViewController {
                 }
                 
                 for document in documents {
-                    self.movies.append(document.data())
+                    self.tvShows.append(document.data())
                 }
                 
                 DispatchQueue.main.async {
@@ -52,23 +52,26 @@ class MoviesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+        return tvShows.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "MovieTableViewCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MovieTableViewCell  else { fatalError("The dequeued cell is not an instance of MovieTableViewCell.") }
+        let cellIdentifier = "TVShowsTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TVShowsTableViewCell  else { fatalError("The dequeued cell is not an instance of TVShowsTableViewCell.") }
         
-        let movie = movies[indexPath.row]
+        let tvShow = tvShows[indexPath.row]
         
-        cell.movieName.text = movie["name"] as! String
-        let imagePath = movie["image"] as! String
+        cell.showName.text = tvShow["name"] as! String
+        let imagePath = tvShow["image"] as! String
         
+//        print("Image path")
+//        print(imagePath)
         if (imagePath == "") {
-            cell.movieImage.image = UIImage(named: "20-512")
+            cell.showImage.image = UIImage(named: "20-512")
         } else {
-            var image: UIImage? = nil
             let imagesRef = storageRef.child(imagePath)
+            
+            var image: UIImage? = nil
             
             imagesRef.getData(maxSize: 5 * 1024 * 1024) { data, error in
                 if let error = error {
@@ -79,7 +82,7 @@ class MoviesTableViewController: UITableViewController {
                     image = UIImage(data: data!)
                     
                     DispatchQueue.main.async {
-                        cell.movieImage.image = image
+                        cell.showImage.image = image
                     }
                 }
             }
@@ -88,6 +91,24 @@ class MoviesTableViewController: UITableViewController {
         return cell
     }
     
+    private func getImageFromPath(withPath path: String) -> UIImage? {
+        let imagesRef = storageRef.child(path)
+        
+        var image: UIImage? = nil
+        
+        imagesRef.getData(maxSize: 5 * 1024 * 1024) { data, error in
+            if let error = error {
+                print("Error occured when downloading the image")
+                
+                print(error)
+            } else {
+                image = UIImage(data: data!)
+                
+            }
+        }
+        
+        return image
+    }
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
